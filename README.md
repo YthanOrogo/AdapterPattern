@@ -1,13 +1,25 @@
 ## Problem 
-Implement factory design pattern using Pet as the factory interface.  The interface implements two methods: makeSound() and play().
+You are developing an application that helps users manage and control various electronic devices by plugging them into power outlets. Each device has different plug types, voltage, and amperage requirements. To ensure compatibility and safety, you need to create adapters for different devices to allow them to be plugged into standard power outlets.
 
-Dog and Cat are concrete objects that implements Pet interface.
+Adaptee Objects:
 
-PetRecord holds attributes such as petId, petName, and Pet.
+Laptop - Represents a laptop device that needs to be plugged into a power source. It has the charge() method.
 
-Clinic would be the client object.
+Refrigerator - Represents a refrigerator device that requires a power source. It has the startCooling() method.
 
-Refer to the UML Class Diagram
+SmartphoneCharger - Represents a smartphone charger that needs to be plugged in for charging. It has the chargePhone() method.
+
+Target Object:
+
+PowerOutlet - Represents a standard power outlet with a common interface for plugging in devices. It defines the plugIn() method as the target method.
+
+Adapter Objects:
+
+LaptopAdapter - An adapter for plugging a laptop into a standard power outlet. It adapts the Laptop to the PowerOutlet interface, translating plugIn() to charge().
+
+RefrigeratorAdapter - An adapter for plugging a refrigerator into a standard power outlet. It adapts the Refrigerator to the PowerOutlet interface, translating plugIn() to startCooling().
+
+SmartphoneAdapter - An adapter for plugging a smartphone charger into a standard power outlet. It adapts the SmartphoneCharger to the PowerOutlet interface, translating plugIn() to chargePhone().
 
 ## Class Diagram
-![image](https://github.com/JerryEsperanza/factoryPattern/assets/142370600/0506f134-a5f6-4d98-a817-cd6f7a8466c7)
+![image](AdapterPattern.png)
